@@ -1,10 +1,7 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
-import Home from './pages/Home';
-import AboutContact from './pages/AboutContact';
 
-// --- Navbar Component ---
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
 
@@ -50,19 +47,4 @@ const Navbar = () => {
   );
 };
 
-export default function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-slate-50 font-sans text-slate-900 selection:bg-blue-100 selection:text-blue-900">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about-contact" element={<AboutContact />} />
-        </Routes>
-        <footer className="bg-white border-t border-slate-100 py-12 text-center text-slate-400 text-sm mt-auto">
-          <p>© 2026 Peterson Hub. Built with React, Tailwind & Azure.</p>
-        </footer>
-      </div>
-    </Router>
-  );
-}
+export default Navbar;
