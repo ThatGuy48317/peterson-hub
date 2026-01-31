@@ -9,9 +9,7 @@ export default function AboutContact() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-16">
-      
       <div className="grid md:grid-cols-2 gap-16 mb-24">
-        {/* BIO SECTION */}
         <div>
           <h1 className="text-4xl font-serif font-bold text-slate-900 mb-6">About Me</h1>
           <div className="prose prose-slate text-lg text-slate-600 leading-relaxed space-y-4">
@@ -21,7 +19,6 @@ export default function AboutContact() {
             <p>
               My work focuses on practical automation—taking the repetitive, complex tasks of IT management and streamlining them through modern tooling and AI agents.
             </p>
-            
             <div className="pt-6">
               <h3 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4">Offline Interests</h3>
               <div className="flex gap-4">
@@ -35,21 +32,17 @@ export default function AboutContact() {
             </div>
           </div>
         </div>
-
-        {/* IMAGE PLACEHOLDER */}
         {/* Updated for Tailwind v4: min-h-[300px] -> min-h-75 */}
         <div className="bg-slate-100 rounded-2xl min-h-75 flex items-center justify-center border-2 border-dashed border-slate-300">
           <span className="text-slate-400 font-medium">Headshot / Action Shot Placeholder</span>
         </div>
       </div>
 
-      {/* CONTACT FORM SECTION */}
       <div className="bg-slate-900 rounded-3xl p-8 md:p-12 text-white">
         <div className="max-w-2xl mx-auto text-center mb-10">
           <h2 className="text-3xl font-serif font-bold mb-4">Let's Connect</h2>
           <p className="text-slate-400">Have a question about my research or want to discuss a project? Drop me a message.</p>
         </div>
-
         <form onSubmit={handleSubmit} className="max-w-xl mx-auto space-y-4">
           <div className="grid md:grid-cols-2 gap-4">
             <div>
@@ -70,7 +63,6 @@ export default function AboutContact() {
           </button>
         </form>
       </div>
-
     </div>
   );
 }

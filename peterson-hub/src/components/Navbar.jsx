@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <nav className="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100">

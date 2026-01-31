@@ -1,7 +1,6 @@
 import React from 'react';
 import { Github, Cpu, Sparkles, ArrowRight, ExternalLink, Calendar } from 'lucide-react';
 
-// --- MOCK DATA ---
 const buckets = {
   software: [
     { title: "Stock Market Screener", tags: ["Python", "Azure", "AI"], link: "https://stocks.petersonhub.com" },
@@ -20,8 +19,6 @@ const buckets = {
     { title: "Voice Agent Interface", status: "Prototype", description: "Real-time voice-to-action." }
   ]
 };
-
-// --- CARD COMPONENTS ---
 
 const SoftwareCard = ({ item }) => (
   <a href={item.link} className="group block bg-white p-6 rounded-xl border border-slate-200 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300">
@@ -65,7 +62,6 @@ const ResearchCard = ({ item }) => (
 const CreativeCard = ({ item }) => (
   <div className="group cursor-pointer relative overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500">
     <img src={item.image} alt={item.title} className="w-full h-48 object-cover transform group-hover:scale-105 transition-transform duration-700" />
-    {/* Updated for Tailwind v4: bg-gradient-to-t -> bg-linear-to-t */}
     <div className="absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent opacity-90" />
     <div className="absolute bottom-0 left-0 p-6">
       <div className="flex items-center gap-2 text-orange-300 mb-1 opacity-0 group-hover:opacity-100 transition-opacity transform translate-y-2 group-hover:translate-y-0 duration-300">
@@ -80,7 +76,6 @@ const CreativeCard = ({ item }) => (
 const AICard = ({ item }) => (
   <div className="group bg-slate-900 p-6 rounded-xl text-white shadow-lg hover:shadow-2xl hover:-translate-y-1 transition-all duration-300 relative overflow-hidden">
     <div className="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-    
     <div className="flex justify-between items-start mb-4 relative z-10">
       <Cpu size={24} className="text-purple-400" />
       <span className="flex items-center gap-1 text-[10px] font-bold uppercase tracking-widest border border-purple-500/30 px-2 py-1 rounded-full text-purple-300">
@@ -99,7 +94,6 @@ const AICard = ({ item }) => (
 export default function Home() {
   return (
     <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-      {/* HERO SECTION */}
       <section className="mb-24 text-center max-w-3xl mx-auto">
         <h1 className="text-5xl md:text-7xl font-bold text-slate-900 font-serif mb-6 tracking-tight">
           Adam Peterson
@@ -110,21 +104,16 @@ export default function Home() {
         </p>
       </section>
 
-      {/* BUCKET GRID */}
       <div className="space-y-20">
-        
-        {/* ROW 1: Software & Research */}
         <div className="grid md:grid-cols-2 gap-12">
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
-              {/* Updated for Tailwind v4: h-[1px] -> h-px */}
               <span className="w-8 h-px bg-slate-300"></span> Software Engineering
             </h2>
             <div className="grid gap-4">
               {buckets.software.map((item, i) => <SoftwareCard key={i} item={item} />)}
             </div>
           </section>
-
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
               <span className="w-8 h-px bg-slate-300"></span> Doctoral Studies
@@ -135,7 +124,6 @@ export default function Home() {
           </section>
         </div>
 
-        {/* ROW 2: Creative & AI */}
         <div className="grid md:grid-cols-2 gap-12">
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
@@ -145,7 +133,6 @@ export default function Home() {
               {buckets.creative.map((item, i) => <CreativeCard key={i} item={item} />)}
             </div>
           </section>
-
           <section>
             <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-6 flex items-center gap-2">
               <span className="w-8 h-px bg-slate-300"></span> AI & Automation
@@ -155,7 +142,6 @@ export default function Home() {
             </div>
           </section>
         </div>
-
       </div>
     </main>
   );
