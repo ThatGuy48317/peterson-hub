@@ -1,16 +1,30 @@
-# React + Vite
+# Peterson Hub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The central portfolio landing page for showcasing AI tools, data projects, and professional background. 
 
-Currently, two official plugins are available:
+**Live Site:** [https://www.petersonhub.com](https://www.petersonhub.com)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
 
-## React Compiler
+* **Frontend:** React (Vite)
+* **Styling:** Tailwind CSS v4
+* **CMS:** Sanity.io (Headless CMS)
+* **Icons:** Lucide React
+* **Deployment:** Azure Static Web Apps (Frontend) + Sanity Cloud (Content)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📂 Project Structure
 
-## Expanding the ESLint configuration
+This repository uses a monorepo-style structure:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **`/peterson-hub`** → The React Frontend (Website)
+* **`/peterson-cms`** → The Sanity Studio (Content Management System)
+
+## 🚀 Local Setup
+
+To run the project locally, you need two terminal windows open (one for the site, one for the CMS).
+
+### 1. Start the CMS (Backend)
+```bash
+cd peterson-cms
+npm install  # Only first time
+npm run dev
